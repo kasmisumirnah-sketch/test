@@ -28,8 +28,8 @@ export const CONSTANTS = {
   BALL_FRICTION: 0.1,
 
   // Camera constants
-  CAMERA_OFFSET_Y: 3,
-  CAMERA_OFFSET_Z: 8,
+  CAMERA_OFFSET_Y: 8,
+  CAMERA_OFFSET_Z: 15,
   CAMERA_LERP_SPEED: 0.1,
 
   // Control constants

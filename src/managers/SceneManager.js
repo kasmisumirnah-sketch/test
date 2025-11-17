@@ -27,7 +27,7 @@ export class SceneManager {
       0.1,
       1000
     );
-    this.camera.position.set(0, 5, 10);
+    this.camera.position.set(0, 10, 15);
     this.camera.lookAt(0, 0, 0);
 
     // Create renderer

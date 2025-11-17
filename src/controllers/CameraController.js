@@ -11,8 +11,8 @@ export class CameraController {
     this.camera = camera;
     this.targetPosition = new THREE.Vector3();
     this.currentZoomOffset = CONSTANTS.CAMERA_OFFSET_Z;
-    this.minZoom = 5;
-    this.maxZoom = 15;
+    this.minZoom = 8;
+    this.maxZoom = 25;
     this.zoomSpeed = 0.5;
   }
 
@@ -32,8 +32,8 @@ export class CameraController {
     // Smoothly interpolate camera position (lerp)
     this.camera.position.lerp(this.targetPosition, CONSTANTS.CAMERA_LERP_SPEED);
 
-    // Always look at a point slightly below the target
-    const lookAtPoint = new THREE.Vector3(0, targetPos.y - 1, 0);
+    // Always look at a point below the ball to see the rings
+    const lookAtPoint = new THREE.Vector3(0, targetPos.y - 3, 0);
     this.camera.lookAt(lookAtPoint);
   }
 
@@ -67,7 +67,7 @@ export class CameraController {
       position.y + CONSTANTS.CAMERA_OFFSET_Y,
       this.currentZoomOffset
     );
-    this.camera.lookAt(0, position.y - 1, 0);
+    this.camera.lookAt(0, position.y - 3, 0);
   }
 
   /**
